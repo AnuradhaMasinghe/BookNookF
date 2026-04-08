@@ -1,0 +1,32 @@
+.body {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  justify-content: center; /* Centers the book grid */
+  align-items: flex-start;
+}
+
+/* Book grid */
+.book-grid-booklist {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px; /* Optional max width */
+  width: 100%;
+  justify-items: center;
+}

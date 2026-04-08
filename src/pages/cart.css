@@ -1,0 +1,86 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+.cart-container-shopping {
+    padding: 40px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .cart-table-shopping {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .cart-table-shopping th,
+  .cart-table-shopping td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .book-info-shopping {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .book-info-shopping img {
+    width: 60px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .remove-btn-shopping {
+    background: #e53935;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .remove-btn-shopping:hover {
+    background: #c62828;
+  }
+  
+  .cart-summary-shopping {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  .continue-btn-shopping {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: bold;
+  }
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+  }
+  
+  .book-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    background: #fff;
+  }
+  
+  .book-card img {
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  

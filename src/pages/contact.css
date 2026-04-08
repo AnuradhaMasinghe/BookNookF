@@ -1,0 +1,100 @@
+/* Reset styles and base */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+  }
+  
+  /* Centered page container */
+  .contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Card form container */
+  .contact-card {
+    background-color: white;
+    padding: 30px 30px; /* reduced vertical padding */
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    animation: fadeSlideIn 0.8s ease;
+  }
+  
+  /* Form title */
+  .contact-card h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Form subtitle */
+  .contact-card p {
+    margin-bottom: 30px;
+    color: #666;
+    text-align: center;
+  }
+  
+  /* Form group */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color:  #28a745; 
+    box-shadow: 0 0 8px rgba(52, 110, 4, 0.2);
+  }
+  
+  /* Submit button */
+  .submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color:  #28a745; 
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #6fc248;
+  }
+  
+  /* Animation */
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .contact-card {
+      padding: 30px 20px;
+    }
+  }
+  

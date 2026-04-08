@@ -1,0 +1,167 @@
+/* Container */
+.payment-container {
+  max-width:400px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Section boxes */
+/* Section boxes with hover transform */
+.payment-methods,
+.address-box-payment,
+.total-box-payment {
+  margin-bottom: 25px;
+  padding: 20px 25px;
+  border-radius: 10px;
+  background-color: #f9f9fb;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for interactivity */
+.payment-methods:hover,
+.address-box-payment:hover,
+.total-box-payment:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Section headers */
+.payment-methods h2,
+.address-box-payment h2,
+.total-box-payment h2 {
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid#2e7d32; ;
+  padding-bottom: 6px;
+}
+
+/* Payment option styling */
+.payment-option {
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-option:hover {
+  background-color: #e8f4ff;
+  cursor: pointer;
+}
+
+/* Highlight selected option */
+.payment-option input[type="radio"]:checked + strong {
+  color: #2e7d32; ;
+  font-weight: 600;
+}
+.modal-content ul {
+  list-style-type: none; /* Removes bullet points */
+  padding-left: 0;       /* Removes default indentation */
+}
+
+.modal-content li {
+  margin-bottom: 5px;    /* Optional: adds spacing between items */
+}
+/* Total section text */
+.total-box-payment p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.total-amount-payment {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Payment buttons */
+.payment-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.payment-buttons button {
+  flex: 1;
+  padding: 12px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #00cc1b, #2e7d32);
+  color: white;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.payment-buttons button:hover {
+  background: linear-gradient(135deg,  #00cc1b, #2e7d32);
+  color: white;
+  transform: scale(1.02);
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  background: #fff;
+  padding: 30px 35px;
+  border-radius: 12px;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.modal-content h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2e7d32; ;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+
+/* Loading effect on place order button */
+.placing-order-payment {
+  background-color: #a0aec0 !important;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Lock scroll when modal is open */
+.modal-open-payment {
+  overflow: hidden;
+}

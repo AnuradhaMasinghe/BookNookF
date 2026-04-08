@@ -1,0 +1,15 @@
+[
+    {
+      "title": "Atomic Habits",
+      "image": "https://books.google.com/books/content?id=bgxGDwAAQBAJ&printsec=frontcover&img=1&zoom=1",
+      "price": 15.99,
+      "quantity": 2
+    },
+    {
+      "title": "The Psychology of Money",
+      "image": "https://books.google.com/books/content?id=tLQ7zgEACAAJ&printsec=frontcover&img=1&zoom=1",
+      "price": 12.49,
+      "quantity": 1
+    }
+  ]
+  

@@ -1,0 +1,52 @@
+.navbar {
+  background: white;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  position: sticky;
+  top: 0;
+  left:1%;
+  z-index: 1000; /* 👈 Ensures it's above all other content */
+  border-bottom: 2px solid #1c8f1c;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #297e42, #6cd06c);
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 2px rgba(126, 41, 88, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  padding: 8px 16px;
+  border-radius: 10px;
+ 
+  color: #2e7d32; 
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.nav-links a:hover {
+  background-color: #2e7d32; 
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(42, 133, 65, 0.3);
+}

@@ -1,0 +1,148 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.background-transition {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, white 0%, transparent 45%, transparent 55%, white 100%);
+
+
+  z-index: 2;
+
+}
+
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  /* Optional: add padding or styling here */
+}
+  .homepage {
+    width: 100%;
+    min-height: 100vh;
+    background: transparent;
+  }
+  
+  /* Header */
+  .header-homepage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 60px;
+  }
+  
+  .logo-container-homepage {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo-homepage {
+    height: 50px;
+  }
+  
+  .logo-homepage-text .top {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .logo-homepage-text .bottom {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2e7d32; /* green */
+    line-height: 1.2;
+  }
+  .nav-homepage {
+    margin-left:840px; /* Moves the nav to the left */
+    display: flex;
+    gap: 30px;
+   
+    
+  }
+  .nav-homepage a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .quote-btn-homepage {
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+  }
+  
+  .quote-btn-homepage:hover {
+    background-color: #256428;
+  }
+  
+  /* Main */
+  .main-homepage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 60px;
+    flex-wrap: wrap;
+    margin-top: 200px;
+  }
+  
+  .text-section-homepage {
+    flex: 1;
+    max-width: 50%;
+    margin-top: 20px;
+   
+  }
+  
+  .text-section-homepage h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .text-section-homepage .highlight {
+    color: #2e7d32;
+  }
+  
+  .text-section-homepage p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #555;
+  }
+  
+  .image-section-homepage {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .image-section-homepage img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  

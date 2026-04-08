@@ -1,0 +1,124 @@
+/* Overall Profile Container */
+html, body, #root,.background-wrapper {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.profile-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(to right, #e6ecff, #f7faff);
+  min-height: 100vh;
+}
+
+/* Headings */
+.profile-container h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+
+/* Card Style for Sections */
+.user-info,
+.order-list,
+.favorites-section {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 25px 30px;
+  margin-bottom: 40px;
+ 
+}
+
+/* User Info Styling */
+.user-info h2 {
+  color: #2e7d32;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  margin-left:400px;
+  
+}
+
+.user-info p {
+  font-size: 1.1em;
+  color: #444;
+  margin-left: 500px;
+}
+
+/* Order List Styling */
+.order-list h2 {
+  color:  #2e7d32;
+  margin-bottom: 20px;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.order-table th {
+  background-color:  #2e7d32;
+  color: white;
+  font-weight: 600;
+  padding: 14px;
+}
+
+.order-table td {
+  background-color: #fdfdfd;
+  padding: 12px 16px;
+  color: #333333;
+  vertical-align: top;
+}
+
+.order-table tr:nth-child(even) td {
+  background-color: #f3f8ff;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px;
+  }
+
+  .order-table th, .order-table td {
+    padding: 10px;
+  }
+
+  .book-card-booklist h3 {
+    font-size: 0.95em;
+  }
+
+  .book-card-booklist .author {
+    font-size: 0.85em;
+  }
+}
+.back-button-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.back-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #256428;
+}

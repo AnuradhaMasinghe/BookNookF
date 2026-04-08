@@ -1,0 +1,105 @@
+.my-account-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .sidebar .user-info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar h3 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .sidebar p {
+    margin: 0;
+    color: #888;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #ddd;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .edit-profile-section, .my-orders-section, .my-favourites-section {
+    margin-top: 20px;
+  }
+  
+  .profile-input {
+    margin-bottom: 15px;
+  }
+  
+  .profile-input input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #005f6b;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .favourites-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .favourite-card {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .favourite-card img {
+    width: 100px;
+    height: 150px;
+    margin-bottom: 10px;
+  }
+  
+  .favourite-card h3 {
+    font-size: 16px;
+  }
+  

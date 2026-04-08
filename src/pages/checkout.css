@@ -1,0 +1,168 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+
+}
+
+.checkout-container {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .checkout-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  
+  
+  .order-summary-checkout {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  
+  .order-summary-checkout ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .order-summary-checkout li {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .order-summary-checkout .total {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+  }
+  
+  .shipping-form {
+    width: 100%;
+    max-width: 600px; /* Adjust this as needed */
+    margin: 0 auto;   /* Center the form */
+    background-color: #fafafa;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.03);
+  }
+  .shipping-form input,
+  .shipping-form select {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 12px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    font-size: 15px;
+    transition: border 0.3s ease;
+    max-width: 500px;
+    box-sizing: border-box; /* 🔥 Ensure consistent sizing */
+    appearance: none;  
+  }
+
+  .shipping-form input:focus,
+  .shipping-form select:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+  }
+  
+  .shipping-methods {
+    margin-top: 30px;
+  }
+  
+  .shipping-methods label {
+    display: block;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .next-button-checkout {
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .next-button-checkout:hover {
+    background-color: #256428;
+  }
+  /* Order Summary Table */
+.summary-table-checkout {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.summary-table-checkout th,
+.summary-table-checkout td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.summary-table-checkout thead th {
+  background-color: #e0f2f1;
+  color: #00695c;
+  font-weight: 600;
+}
+
+.summary-table-checkout tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.total-label-checkout {
+  font-weight: bold;
+  text-align: right;
+  background-color: #f1f8e9;
+  color: #33691e;
+}
+
+.total-value-checkout {
+  font-weight: bold;
+  background-color: #f1f8e9;
+  color: #33691e;
+}
+  .shipping-table-checkout {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .shipping-table-checkout th,
+  .shipping-table-checkout td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .shipping-table-checkout th {
+    background-color: #f9f9f9;
+  }
+  
+  .shipping-table-checkout input[type="radio"] {
+    transform: scale(1.2);
+  }
+  .icon-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
