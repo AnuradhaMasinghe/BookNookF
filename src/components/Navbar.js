@@ -1,13 +1,16 @@
 // Navbar.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaShoppingCart, FaUserCircle, FaSignOutAlt, FaBook, FaHeart } from 'react-icons/fa';
+import { FaShoppingCart, FaUserCircle, FaSignOutAlt, FaBook, FaHeart, FaBookOpen } from 'react-icons/fa';
 import './Navbar.css';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <h2 className="logo">The Book Nook</h2>
+      <div className="logo">
+        <FaBookOpen className="logo-icon" />
+        <h2>The Book Nook</h2>
+      </div>
       <ul className="nav-links">
         <li><Link to="/Booklist"><FaBook /> Book List</Link></li>
         <li><Link to="/Cart"><FaShoppingCart /> Cart</Link></li>
