@@ -110,7 +110,7 @@ function LoginPage() {
       <div className="container-login ">
         <div className="left-panel-login ">
           <video autoPlay loop muted className="bg-video-login ">
-              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+              <source src="https://res.cloudinary.com/dghkbezot/video/upload/v1775626823/book_ss7jut.mp4" type="video/mp4" />
           </video>
           <div className="overlay-content-login ">
             <h1>Join a world where books are <br />just the beginning</h1>
