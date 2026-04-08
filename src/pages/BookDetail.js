@@ -5,6 +5,7 @@ import './bookdetail.css';
 
 import { FaShoppingCart } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { showSuccess, showError, showInfo, showWarning } from '../utils/notification';
 
 const APP_URL = process.env.REACT_APP_API_URL;
 const API_KEY = process.env.REACT_APP_API_KEY;
@@ -45,7 +46,7 @@ const BookDetail = () => {
     try {
       const token = localStorage.getItem('token');
       if (!token) {
-        alert('You must be logged in to add a book to the cart!');
+        showWarning('You must be logged in to add a book to the cart!');
         return;
       }
 
@@ -68,15 +69,15 @@ const BookDetail = () => {
         }
       );
 
-      alert('Book added to cart!');
+      showSuccess('Book added to cart!');
     } catch (error) {
       if (error.response?.status === 401) {
-        alert('Session expired. Please log in again.');
+        showInfo('Session expired. Please log in again.');
         localStorage.removeItem('token');
         navigate('/login');
       } else {
         console.error('Failed to add book to cart', error);
-        alert('Failed to add book to cart');
+        showError('Failed to add book to cart');
       }
     }
   };

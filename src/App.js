@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { jwtDecode } from 'jwt-decode';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { showInfo } from './utils/notification';
 
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -35,14 +38,24 @@ function App() {
 
     function logoutUser() {
       localStorage.removeItem('token');
-      // Optional: show alert
-      alert("Session expired. Please login again.");
+      // Show notification instead of alert
+      showInfo('Session expired. Please login again.');
       window.location.href = '/LoginPage';
     }
   }, []);
   return (
     <Router>
-      
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div style={{ padding: '20px' }}>
         <Routes>
           <Route path="/" element={<Land />} />
@@ -62,7 +75,7 @@ function App() {
           <Route path="/FavoritePage" element={<FavoritePage/>} />
         
        
-          </Routes>
+        </Routes>
       </div>
     </Router>
   );

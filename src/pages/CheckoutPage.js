@@ -4,6 +4,7 @@ import './checkout.css';
 import Navbar from '../components/Navbar';
 import { useNavigate } from 'react-router-dom';
 import { FaTruckMoving, FaGift, FaMailBulk } from 'react-icons/fa';
+import { showWarning, showError } from '../utils/notification';
 
 const provinces = [
   'Central', 'Eastern', 'Northern', 'Southern',
@@ -93,7 +94,7 @@ const CheckoutPage = () => {
     console.log('handleNext called');
   
     if (cartItems.length === 0 || totalPrice === 0) {
-      alert('Your cart is empty. Please add items to proceed.');
+      showWarning('Your cart is empty. Please add items to proceed.');
       return;
     }
   
@@ -103,22 +104,22 @@ const CheckoutPage = () => {
       const missingFieldNames = emptyFields.map(([key]) =>
         key.charAt(0).toUpperCase() + key.slice(1)
       ).join(', ');
-      alert(`Please fill in all required fields: ${missingFieldNames}`);
+      showWarning(`Please fill in all required fields: ${missingFieldNames}`);
       return;
     }
   
     if (emailError) {
-      alert(emailError);
+      showError(emailError);
       return;
     }
   
     if (phoneError) {
-      alert(phoneError);
+      showError(phoneError);
       return;
     }
   
     if (postalCodeError) {
-      alert(postalCodeError);
+      showError(postalCodeError);
       return;
     }
   

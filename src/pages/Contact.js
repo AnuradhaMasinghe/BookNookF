@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './contact.css';
+import { showSuccess } from '../utils/notification';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,7 +16,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Message sent successfully!');
+    showSuccess('Message sent successfully!');
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
 

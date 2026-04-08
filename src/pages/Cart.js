@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './cart.css';
 import axios from 'axios';
 import Navbar from '../components/Navbar';
+import { showError } from '../utils/notification';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -46,7 +47,7 @@ const Cart = () => {
       setCartItems(updated);
     } catch (error) {
       console.error("Failed to update quantity:", error.response?.data || error.message);
-      alert("Failed to update quantity");
+      showError("Failed to update quantity");
     }
   };
   
@@ -65,7 +66,7 @@ const Cart = () => {
       setCartItems(updated);
     } catch (error) {
       console.error("Failed to remove item from cart:", error.response?.data || error.message);
-      alert("Failed to remove item from cart");
+      showError("Failed to remove item from cart");
     }
   };
 

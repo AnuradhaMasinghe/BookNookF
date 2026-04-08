@@ -4,6 +4,7 @@ import "./login.css";
 // import book from "../assets/book.mp4";
 import { useNavigate } from "react-router-dom";
 import { FaBookOpen, FaEye, FaEyeSlash } from 'react-icons/fa';
+import { showSuccess } from '../utils/notification';
 
 const APP_URL = process.env.REACT_APP_API_URL;
 
@@ -77,7 +78,7 @@ function LoginPage() {
       const { data } = await axios.post(url, payload);
       setSuccess(isLogin ? "Login successful!" : "User registered successfully!");
       setError("");
-      alert(isLogin ? "Login successful!" : "Registration successful!");
+      showSuccess(isLogin ? "Login successful!" : "Registration successful!");
       console.log(data);
       
       // Reset form after successful registration

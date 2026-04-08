@@ -4,6 +4,7 @@ import './booklist.css';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { FaShoppingCart, FaHeart, FaEllipsisH } from 'react-icons/fa';
+import { showSuccess, showError, showInfo, showWarning } from '../utils/notification';
 
 
 const BookList = () => {
@@ -42,7 +43,7 @@ const BookList = () => {
     try {
       const token = localStorage.getItem('token');
       if (!token) {
-        alert('You must be logged in to manage favorites!');
+        showWarning('You must be logged in to manage favorites!');
         return;
       }
   
@@ -72,21 +73,21 @@ const BookList = () => {
         return updated;
       });
   
-      // Move alert here, outside setState
+      // Show notification here, outside setState
       if (message === 'added') {
-        alert('Book added to favorites!');
+        showSuccess('Book added to favorites!');
       } else if (message === 'removed') {
-        alert('Book removed from favorites!');
+        showSuccess('Book removed from favorites!');
       }
   
     } catch (error) {
       if (error.response?.status === 401) {
-        alert('Session expired. Please log in again.');
+        showInfo('Session expired. Please log in again.');
         localStorage.removeItem('token');
         navigate('/login');
       } else {
         console.error('Failed to update favorites', error);
-        alert('Failed to update favorites');
+        showError('Failed to update favorites');
       }
     }
   };
@@ -117,7 +118,7 @@ const BookList = () => {
     try {
       const token = localStorage.getItem('token');
       if (!token) {
-        alert('You must be logged in to add a book to the cart!');
+        showWarning('You must be logged in to add a book to the cart!');
         return;
       }
 
@@ -140,15 +141,15 @@ const BookList = () => {
         }
       );
 
-      alert('Book added to cart!');
+      showSuccess('Book added to cart!');
     } catch (error) {
       if (error.response?.status === 401) {
-        alert('Session expired. Please log in again.');
+        showInfo('Session expired. Please log in again.');
         localStorage.removeItem('token');
         navigate('/login');
       } else {
         console.error('Failed to add book to cart', error);
-        alert('Failed to add book to cart');
+        showError('Failed to add book to cart');
       }
     }
   };
