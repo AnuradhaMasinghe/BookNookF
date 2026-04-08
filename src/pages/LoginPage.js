@@ -3,7 +3,7 @@ import axios from "axios";
 import "./login.css";
 // import book from "../assets/book.mp4";
 import { useNavigate } from "react-router-dom";
-import { FaBookOpen } from 'react-icons/fa';
+import { FaBookOpen, FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const APP_URL = process.env.REACT_APP_API_URL;
 
@@ -177,22 +177,42 @@ function LoginPage() {
               onChange={handleChange}
             />
 
-            <input
-              type={showPassword ? "text" : "password"}
-              name="password"
-              placeholder="Enter Password"
-              required
-              onChange={handleChange}
-            />
-
-            {!isLogin && (
+            <div className="password-input-wrapper">
               <input
                 type={showPassword ? "text" : "password"}
-                name="confirmPassword"
-                placeholder="Confirm Password"
+                name="password"
+                placeholder="Enter Password"
                 required
                 onChange={handleChange}
               />
+              <button
+                type="button"
+                className="password-toggle-btn"
+                onClick={() => setShowPassword(!showPassword)}
+                title={showPassword ? "Hide password" : "Show password"}
+              >
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
+              </button>
+            </div>
+
+            {!isLogin && (
+              <div className="password-input-wrapper">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  name="confirmPassword"
+                  placeholder="Confirm Password"
+                  required
+                  onChange={handleChange}
+                />
+                <button
+                  type="button"
+                  className="password-toggle-btn"
+                  onClick={() => setShowPassword(!showPassword)}
+                  title={showPassword ? "Hide password" : "Show password"}
+                >
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </button>
+              </div>
             )}
 
            
