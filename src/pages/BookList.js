@@ -26,6 +26,7 @@ const BookList = () => {
     return { price, stock };
   };
 
+  const API_KEY = process.env.REACT_APP_API_KEY;
   // const getUserId = () => {
   //   const token = localStorage.getItem('token');
   //   if (!token) return null;
@@ -96,8 +97,8 @@ const BookList = () => {
     const fetchBooks = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(
-          `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=30`
+       const response = await axios.get(
+          `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=30&key=${API_KEY}`
         );
         setBooks(response.data.items || []);
       } catch (error) {
@@ -109,7 +110,7 @@ const BookList = () => {
 
     const delayDebounce = setTimeout(fetchBooks, 500);
     return () => clearTimeout(delayDebounce);
-  }, [query]);
+  }, [query, API_KEY]);
 
  
   const addToCart = async (book) => {
