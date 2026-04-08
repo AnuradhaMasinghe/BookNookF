@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./login.css";
-import book from "../assets/book.mp4";
+// import book from "../assets/book.mp4";
 import { useNavigate } from "react-router-dom";
 import { FaBookOpen } from 'react-icons/fa';
 
@@ -109,7 +109,7 @@ function LoginPage() {
       <div className="container-login ">
         <div className="left-panel-login ">
           <video autoPlay loop muted className="bg-video-login ">
-            <source src={book} type="video/mp4" />
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
           </video>
           <div className="overlay-content-login ">
             <h1>Join a world where books are <br />just the beginning</h1>
