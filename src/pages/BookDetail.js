@@ -6,7 +6,8 @@ import './bookdetail.css';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
-const APP_URL = process.env.REACT_APP_URL;
+const APP_URL = process.env.REACT_APP_API_URL;
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 const BookDetail = () => {
   const { id } = useParams();
@@ -26,7 +27,7 @@ const BookDetail = () => {
   useEffect(() => {
     const fetchBook = async () => {
       try {
-        const res = await axios.get(`https://www.googleapis.com/books/v1/volumes/${id}`);
+        const res = await axios.get(`https://www.googleapis.com/books/v1/volumes/${id}?key=${API_KEY}`);
         setBook(res.data);
       } catch (err) {
         console.error('Error fetching book details:', err);
