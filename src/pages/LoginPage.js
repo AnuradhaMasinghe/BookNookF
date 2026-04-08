@@ -90,7 +90,7 @@ function LoginPage() {
           password: "",
           confirmPassword: ""
         });
-        setFormKey((prev) => prev + 1);
+        setFormKey(prev => prev + 1);
         setIsLogin(true);
         
       } else {
@@ -124,8 +124,6 @@ function LoginPage() {
                   <button
                     onClick={() => {
                       setIsLogin(false);
-                      setFormData({ username: "", email: "", password: "", confirmPassword: "" });
-                      setFormKey((prev) => prev + 1);
                       setError("");
                       setSuccess("");
                     }}
@@ -139,8 +137,6 @@ function LoginPage() {
                   <button
                     onClick={() => {
                       setIsLogin(true);
-                      setFormData({ username: "", email: "", password: "", confirmPassword: "" });
-                      setFormKey((prev) => prev + 1);
                       setError("");
                       setSuccess("");
                     }}
@@ -166,15 +162,13 @@ function LoginPage() {
           {error && <div className="error">{error}</div>}
           {success && <div className="success">{success}</div>}
 
-          <form key={formKey} autoComplete="off" onSubmit={handleSubmit}>
+          <form key={formKey} onSubmit={handleSubmit}>
             {!isLogin && (
               <input
                 type="text"
                 name="username"
                 placeholder="Enter Username"
                 required
-                autoComplete="off"
-                value={formData.username}
                 onChange={handleChange}
               />
             )}
@@ -183,8 +177,7 @@ function LoginPage() {
               name="email"
               placeholder="Enter Email"
               required
-              autoComplete="off"
-              value={formData.email}
+              autoComplete={isLogin ? "off" : "email"}
               onChange={handleChange}
             />
 
@@ -194,8 +187,7 @@ function LoginPage() {
                 name="password"
                 placeholder="Enter Password"
                 required
-                autoComplete="new-password"
-                value={formData.password}
+                autoComplete={isLogin ? "off" : "new-password"}
                 onChange={handleChange}
               />
               <button
@@ -215,8 +207,6 @@ function LoginPage() {
                   name="confirmPassword"
                   placeholder="Confirm Password"
                   required
-                  autoComplete="new-password"
-                  value={formData.confirmPassword}
                   onChange={handleChange}
                 />
                 <button
